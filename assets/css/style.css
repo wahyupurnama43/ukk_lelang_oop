@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins';
+    color:#3E3E3E;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: wrap;
+}
+.menu-list,.menu-login{
+    display: flex;
+    padding: 10px;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+.menu-list li,.menu-login li{
+    padding: 0 10px;
+}
+
+.menu-list li a, .menu-login li a{
+    display: inline-block;
+    color:#3E3E3E;
+    transition: all .2s ease-in-out;
+}
+.menu-list li a:hover , .menu-login li a:hover{
+    transform: scale(1.2);
+}
+.menu-toggle {
+    display: none;
+    background:transparent;
+    border:none;
+    cursor: pointer;
+}
+.menu-toggle:focus{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color: #3E3E3E;
+}
+
+/* hero */
+.hero{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.hero img{
+    margin-top: 10px;
+    width: 90%;
+    max-width: 90%;
+}
+.now {
+    position: relative;
+    margin-top: 25px;
+}
+.now a{
+    text-align: center;
+    position: absolute;
+    top:0;
+    left: 47%;
+    font-size: 30px;
+    letter-spacing: 5px;
+    border: 2px solid #3E3E3E;
+    cursor: pointer;
+    font-weight: 300;
+    padding-left: 7px;
+}
+
+
+/* product */
+.product{
+    padding: 0 30px;
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.product .card{
+    text-align: center;
+    height: auto;
+    background: rgba(0,0,0,.07);
+}
+
+.product .card img{
+    margin-top: 20px;
+    width: 90%;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding:5px 20px;
+
+}
+.btn:focus{
+    outline:none;
+}
+
+.product h1{
+    margin-top:10px;
+}
+.product .des{
+    font-size: .8em;
+    padding:10px 0;
+
+}
+.product .bind{
+    margin:20px 0;
+    border: 2px solid #3E3E3E;
+    transition: all .5s ease-in-out;
+}
+
+.product .bind:hover{
+    transform: scale(1.2);
+}
+
+footer{
+    margin-top: 2rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* LOGIN */
+section.card-login{
+    position: absolute;
+    top: 13%;
+    left: 49%;
+    transform: translate(-50%,50%);
+    text-align: center;
+}
+section.card-register{
+    position: absolute;
+    top: 0%;
+    left: 49%;
+    transform: translate(-50%,20%);
+    text-align: center;
+}
+.card-login p,.card-register p{
+    margin-bottom: 10px;
+}
+.card-login .signup,.card-register .signup{
+    font-size: .7em;
+    color:rgba(0, 0, 0, 0.5);
+}
+.card-login .signup a, .card-register .signup a{
+    color:#5EB1FF;
+}
+
+/* form group */
+
+.form-group{
+    padding: 5px;
+}
+
+.form-group input,.form-group textarea{
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,8%);
+    padding:8px 9px;
+    color: #333;
+    box-sizing: border-box;
+    width: 270px;
+    font-size: .9em;
+}
+.form-group input:focus,.form-group textarea:focus{
+    outline: none;
+    border:2px solid #428bca;
+}
+.btn-login{
+    width: 100%;
+    padding: 8px 0;
+    background: #5EB1FF;
+    color: #fff;
+    font-size: 1em;
+}
+
+
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .now a{
+        font-size: 15px !important;
+        border: 1px solid #3E3E3E;
+        letter-spacing: 0px;
+        padding: 0 5px;
+    }
+    .hero{
+
+        margin-bottom: 4rem;
+    }
+
+    .product{
+        grid-template-columns: repeat(auto-fit,minmax(150px,1fr)) !important;
+    }
+
+    .now {
+        margin-bottom: 80px;
+    }
+
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .menu-list{
+        display: none;
+
+    }
+    .menu-toggle{
+        display: block;
+        padding-left: 10px;
+        z-index: 999;
+    }
+
+    .show{
+        display:block;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background: #d1d1d1;
+        width: 100%;
+        height: 100vh;
+        z-index: 99;
+    }
+    .menu-list{
+        padding-top: 100px;
+    }
+    .menu-list li a {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+    }
+    .now a{
+        font-size: 20px;
+    }
+
+    .product{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .now a{
+        font-size: 25px;
+    }
+}
+/*
+// Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {  }
